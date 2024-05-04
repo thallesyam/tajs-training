@@ -1,0 +1,25 @@
+{
+  "name": "01.setup-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=nock* NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand tests/",
+    "test:dev": "DEBUG=nock* NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand tests/ --watchAll",
+    "test:debug": "DEBUG=nock* node --experimental-vm-modules --inspect-brk node_modules/.bin/jest --runInBand --watchAll tests/"
+  },
+  "keywords": [],
+  "author": "thallesian",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": "v18.18.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "nock": "^13.4.0"
+  }
+}
